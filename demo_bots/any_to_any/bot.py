@@ -76,7 +76,7 @@ class AnyToAny(Bot):
         pass
 
     def store_deposits(self):
-        self.store.store(self.from_currency + '_deposits', self.deposits)
+        self.store.set(self.from_currency + '_deposits', self.deposits)
 
     def _add_deposit(self, idx, state, original, pending):
         self.deposits[idx] = {
@@ -172,7 +172,7 @@ class AnyToAny(Bot):
                     if withdrawal.state == 'pending_preparation':  # Check state to set and store updated values
                         self.log.info(f'{self.to_currency} withdrawal request received, updating store values')
                         deposit['pending_withdrawal'] = False
-                        self.store.store(self.from_currency + '_deposits', self.deposits)
+                        self.store.set(self.from_currency + '_deposits', self.deposits)
                         self.notifier.notify(f'Success!, withdrawal id: {withdrawal.id} {self.to_currency}')
                     else:
                         msg = 'Withdrawal failed'
