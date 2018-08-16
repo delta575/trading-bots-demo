@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a82642b2bbd3edcfaa0c70e73dcfbfff0741b394308bb081c4d4a517643ceb2c"
+            "sha256": "66195028e5af3e4124e15ddf81196c887ed2350b4e53de99b50e4239c0b5f2a2"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7"
+            "python_version": "3.6"
         },
         "sources": [
             {
@@ -113,6 +113,7 @@
                 "sha256:63b52e3c866428a224f97cab011de738c36aec0185aa91cfacd418b5d58911d1",
                 "sha256:ec22d826a36ed72a7358ff3fe56cbd4ba69dd7a6718ffd450ff0e9df7a47ce6a"
             ],
+            "markers": "python_version < '4' and python_version != '3.0.*' and python_version != '3.1.*' and python_version >= '2.6' and python_version != '3.2.*' and python_version != '3.3.*'",
             "version": "==2.19.1"
         },
         "simple-settings": {
@@ -162,7 +163,7 @@
                 "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
                 "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
             ],
-            "markers": "python_version != '3.3.*' and python_version >= '2.6' and python_version != '3.0.*' and python_version < '4' and python_version != '3.1.*' and python_version != '3.2.*'",
+            "markers": "python_version < '4' and python_version != '3.0.*' and python_version != '3.1.*' and python_version >= '2.6' and python_version != '3.2.*' and python_version != '3.3.*'",
             "version": "==1.23"
         },
         "websocket-client": {
