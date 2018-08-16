@@ -124,7 +124,10 @@ class AnyToAny(Bot):
             converted_amount = deposit['amounts']['converted_amount']
             converted_value = deposit['amounts']['converted_value']
             remaining = original_amount - converted_amount
-            if deposit['state'] == 'confirmed' and remaining > 0:
+            if converted_amount / original_amount >= 0.99:
+                deposit['amounts']['converted_amount'] = original_amount
+                self.store_deposits()
+            elif deposit['state'] == 'confirmed' and remaining > 0:
                 if self.side == Side.BUY:  # Change amount to base currency for order creation purposes
                     quotation = self.buda.client.quotation_market(
                         market_id=self.buda.market_id, quotation_type='bid_given_spent_quote', amount=remaining)
