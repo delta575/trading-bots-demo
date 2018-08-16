@@ -57,7 +57,12 @@ class AnyToAny(Bot):
         # Get deposits from store
         self.deposits = self.store.get(self.from_currency + '_deposits') or {}
         # Set start date
-        self.start_date = datetime.utcnow()
+        self.start_date = self.store.get('start_date')
+        if self.start_date:
+            self.start_date = datetime.utcfromtimestamp(self.start_date)
+        else:
+            self.start_date = datetime.utcnow()
+            self.store.set('start_date', self.start_date.timestamp())
         # Set notifier client
         self.notifier = Notifier(tag=self.label, logger=self.log)
 
@@ -85,7 +90,7 @@ class AnyToAny(Bot):
                         'converted_amount': 0,
                         'converted_value': 0},
             'orders': [],
-            'pending_withdrawal': pending
+            'pending_withdrawal': pending,
         }
 
     def update_deposits(self):
