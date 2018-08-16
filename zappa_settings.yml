@@ -12,4 +12,9 @@ production:
     expression: rate(1 minute)
     kwargs:
       bot: AnyToAny
-      config: quotes
+      config: buy-btcclp
+  - function: demo_bots.tasks.run_bot
+    expression: rate(1 minute)
+    kwargs:
+      bot: AnyToAny
+      config: sell-btcclp
