@@ -27,5 +27,5 @@ urls:
   buda: https://www.buda.com/api/v2/
 
 slack:
-  channel: '#alertas-robot'
+  channel: '#hackathon-bots'
   username: Broker Meeseeks
