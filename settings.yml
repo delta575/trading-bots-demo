@@ -24,3 +24,8 @@ storage:
 timeout: 120
 
 urls:
+  buda: https://www.buda.com/api/v2/
+
+slack:
+  channel: '#alertas-robot'
+  username: Broker Meeseeks
