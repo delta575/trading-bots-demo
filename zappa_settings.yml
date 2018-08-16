@@ -1,0 +1,15 @@
+production:
+  project_name: trading-bots-demo
+  runtime: python3.6
+  s3_bucket: raptor-zappa
+  log_level: ERROR
+  keep_warm: False
+  environment_variables:
+    SETTINGS: settings.yml,secrets.yml
+
+  events:
+  - function: demo_bots.tasks.run_bot
+    expression: rate(1 minute)
+    kwargs:
+      bot: AnyToAny
+      config: quotes
