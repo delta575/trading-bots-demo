@@ -5,7 +5,7 @@
 
 tag: DemoBots
 
-dry_run: True
+dry_run: False
 
 installed_bots:
   - demo_bots.any_to_any
