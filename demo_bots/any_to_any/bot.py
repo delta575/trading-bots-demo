@@ -176,7 +176,7 @@ class AnyToAny(Bot):
                         self.log.info(f'{self.to_currency} withdrawal request received, updating store values')
                         deposit['pending_withdrawal'] = False
                         self.store.set(self.from_currency + '_deposits', self.deposits)
-                        self.notifier.notify(f'Success!, withdrawal id: {withdrawal.id} {self.to_currency}')
+                        self.notifier.notify(f'Success!, withdrawal id: {withdrawal.id}')
                     else:
                         msg = 'Withdrawal failed'
                         self.log.warning(msg)
