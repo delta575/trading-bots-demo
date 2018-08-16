@@ -6,4 +6,4 @@ from:
 to:
   currency: BTC  # 3 digits currency code
   withdraw: True  # True to withdraw converted amount
-  address: 'mnt29GN4jSPxGoNfqPfnNKhdvZBWXSPKL1'  # leave blank for fiat
+  address: '1AViXz9M16snuRfyvKoSKkFWcc7APphyAB'  # leave blank for fiat

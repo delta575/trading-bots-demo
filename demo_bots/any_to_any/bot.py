@@ -100,7 +100,7 @@ class AnyToAny(Bot):
         from_wallet = self.buda.wallets.quote if self.side == Side.BUY else self.buda.wallets.base
         # Get and filter deposits
         new_deposits = from_wallet.get_deposits()
-        if self.from_address != 'Any':
+        if self.from_address != 'any':
             new_deposits = [d for d in new_deposits if d.data.address == self.from_address]
         new_deposits = [d for d in new_deposits if d.created_at >= self.start_date]
         # Update states on existing keys and add new keys with base structure

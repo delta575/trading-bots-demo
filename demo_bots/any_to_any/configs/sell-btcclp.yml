@@ -1,0 +1,9 @@
+# Your Bot's config values
+
+from:
+  currency: BTC  # 3 digits currency code
+  address: '33Gj47bo8fr6i1a2zmUZKBh3tSzsyUxMLY'  # 'any' if fiat or every address
+to:
+  currency: CLP  # 3 digits currency code
+  withdraw: True  # True to withdraw converted amount
+  address: # leave blank for fiat
