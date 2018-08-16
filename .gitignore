@@ -177,3 +177,6 @@ venv.bak/
 
 # Logs
 /log.txt
+
+# Store
+/store.json
